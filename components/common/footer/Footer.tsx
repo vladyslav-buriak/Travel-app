@@ -1,12 +1,17 @@
 import styles from "./Footer.module.scss";
 import { useRouter } from 'next/router';
+import { Interface } from "readline";
 
+interface INavItem {
+    name:string,
+    link:String,
+}
 const Footer = () => {
 
-    const { push, pathname } = useRouter()
+    const { push, pathname } = useRouter();
 
 
-    const navItems = [
+    const navItems:INavItem[] = [
         {
             name: 'home',
             link: '/'
