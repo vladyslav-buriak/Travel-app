@@ -1,11 +1,10 @@
-import styles from "./Footer.module.scss"
-import { useRouter } from 'next/router'
+import styles from "./Footer.module.scss";
+import { useRouter } from 'next/router';
 
 const Footer = () => {
 
     const { push, pathname } = useRouter()
-    const s = useRouter();
-    console.log(s.pathname)
+
 
     const navItems = [
         {
@@ -17,12 +16,12 @@ const Footer = () => {
             link: "/explore"
         },
         {
-            name: "location_on",
-            link: "/location"
+            name: "place",
+            link: "/place/kyoto"
         },
         {
             name: "person",
-            link: "/person"
+            link: "/profile"
         }
     ]
     return (
