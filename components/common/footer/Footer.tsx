@@ -1,6 +1,6 @@
 import styles from "./Footer.module.scss";
 import { useRouter } from 'next/router';
-import { Interface } from "readline";
+
 
 interface INavItem {
     name:string,
