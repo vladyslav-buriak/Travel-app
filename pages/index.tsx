@@ -11,11 +11,9 @@ interface IHome {
 const Home: NextPage<IHome> = ({ places }) => {
 
   return (
-    <div className={styles.container}>
-      <Layaot>
-        <SearchSection />
-      </Layaot>
-    </div>
+    <Layaot>
+      <SearchSection />
+    </Layaot>
   )
 }
 
