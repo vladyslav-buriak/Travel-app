@@ -1,4 +1,6 @@
 import styles from "./Filters.module.scss";
+import cn from "classnames";
+import { useState } from "react";
 
 const locName = [
     { location: "Paris" },
@@ -11,9 +13,11 @@ const locName = [
 
 
 const Filters = () => {
+    const [activeLoc, setActiveLoc] = useState("");
+    
     return (
         <div className={styles.filtersWrapp}>
-            {locName.map(f => <button>{f.location}</button>)}
+            {locName.map(f => <button className={cn(styles.btn, { [styles.active]: f.location === activeLoc })} key={f.location} onClick={() => { setActiveLoc(f.location) }}>{f.location}</button>)}
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import { GetServerSideProps, GetStaticProps, NextPage } from 'next';
 import styles from '../assets/styles/Home.module.css';
 import Layaot from '../components/common/Layout';
-import SearchSection from '../components/elements/Home/SearchSection/index';
+import Header from '../components/elements/Home/Header/index';
 
 import { IPlace } from '../types/place';
 
@@ -12,7 +12,7 @@ const Home: NextPage<IHome> = ({ places }) => {
 
   return (
     <Layaot>
-      <SearchSection />
+      <Header />
     </Layaot>
   )
 }
