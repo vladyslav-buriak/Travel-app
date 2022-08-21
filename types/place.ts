@@ -1,4 +1,11 @@
+interface ILocation{
+    locationCountry:string,
+    locationCity:string,
+}
+
 export interface IPlace {
-    location:string;
     description:string;
+    imgUrl:string;
+    location:ILocation;
+    slug:string;
 }

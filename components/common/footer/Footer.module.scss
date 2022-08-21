@@ -5,13 +5,13 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(14, 14, 14, 0.8);
 
     >nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 2rem 0;
+        padding: 3rem 0;
 
         >button {
             border: none;
@@ -21,11 +21,12 @@
             >span {
                 color: $gray;
                 transition: all ease .3s;
+                font-size: 2rem;
             }
 
             &:hover,
             &.active {
-                > span {
+                >span {
                     color: $accent;
                 }
             }

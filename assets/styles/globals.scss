@@ -6,7 +6,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color: #0c0b0c;
+    background-color: rgba(0,0,0,0.7);
 }
 
 a {
@@ -55,3 +55,11 @@ ol,
 ul {
     list-style: none;
 }
+
+
+.sm-container{
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+

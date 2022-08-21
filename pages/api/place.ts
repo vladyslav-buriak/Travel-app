@@ -3,8 +3,17 @@ import { IPlace } from '../../types/place'
 
 const places: IPlace[] = [
     {
-        location: "Japan",
-        description: "Good Country"
+        location: { locationCity: "Kyoto", locationCountry: "Japan" },
+        description: "Good Country",
+        imgUrl:"/images/japan.jpg",
+        slug:'tokyo',
+
+    },
+    {
+        location: { locationCity: "Venezia", locationCountry: "Italy" },
+        description: "Good Country",
+        imgUrl:"/images/italy.jpg",
+        slug:'venezia',
     },
 ]
 

@@ -1,0 +1,55 @@
+@import '../../../../assets/styles/variables.scss';
+
+.popularPlaces {
+    margin-top: 4rem;
+
+    .title {
+        font-size: 2rem;
+        color: $white;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+}
+
+
+.itemWrapp {
+    margin-top: 6rem;
+}
+
+.item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+    min-height: 300px;
+    padding: 20px;
+    position: relative;
+    margin-top: -3rem;
+    z-index: 0;
+    box-shadow: 0 23px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+
+    &:before {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 2rem;
+        z-index: -1;
+        transition: background-color .4s ease;
+    }
+
+    &:hover::before {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    >span {
+        font-size: 2.25rem;
+        font-weight: 500;
+        color: $white;
+        margin-left: 1rem;
+    }
+}
