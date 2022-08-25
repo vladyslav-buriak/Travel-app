@@ -8,7 +8,9 @@ interface IChildren {
 const Layaot: FC<IChildren> = ({ children }) => {
     return (
         <>
-            {children}
+            <div style={{maxWidth:'670px',margin:'0 auto'}}>
+                {children}
+            </div>
 
             <Footer />
         </>

@@ -6,7 +6,7 @@ const places: IPlace[] = [
         location: { locationCity: "Kyoto", locationCountry: "Japan" },
         description: "Good Country",
         imgUrl:"/images/japan.jpg",
-        slug:'tokyo',
+        slug:'kyoto',
 
     },
     {
