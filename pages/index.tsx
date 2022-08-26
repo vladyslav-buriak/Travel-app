@@ -12,13 +12,14 @@ interface IHome {
 }
 const Home: NextPage<IHome> = ({ initialState }) => {
   const [places ,setPlaces] = useState(initialState);
-  const [isLoading,setIsLoading] = useState(false)
+  const [isLoading,setIsLoading] = useState(false);
+  
 
   return (
     <Layaot>
       <HeaderSection initialState={initialState} setPlaces={setPlaces} isLoading={setIsLoading} />
       <div className="sm-container">
-        <Filters />
+        <Filters setPlaces={setPlaces} initialState={initialState}  />
         <PopularPlaces places={places} isLoading={isLoading} />
       </div>
     </Layaot>

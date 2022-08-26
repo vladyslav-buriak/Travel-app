@@ -1,23 +1,45 @@
 import styles from "./Filters.module.scss";
 import cn from "classnames";
 import { useState } from "react";
+import { TypeSetState } from "../../../types/common/index";
+import { IPlace } from "../../../types/place";
+import { FC } from "react";
 
 const locName = [
-    { location: "Paris" },
-    { location: "Bora Bora" },
-    { location: "Maui" },
-    { location: "Tahiti" },
-    { location: "Brazil" },
+    { location: "France" },
+    { location: "Japan" },
     { location: "Norway" },
+    { location: "Italy" },
+    { location: "Germany" },
+    { location: "Brazil" },
 ]
 
 
-const Filters = () => {
+interface IFilter {
+    setPlaces: TypeSetState<IPlace[]>;
+    initialState: IPlace[];
+}
+
+const Filters: FC<IFilter> = ({ initialState, setPlaces }) => {
+
     const [activeLoc, setActiveLoc] = useState("");
-    
+
+
+    const filterHandler = (location) => {
+        setActiveLoc(location)
+        if (activeLoc === location) {
+            setPlaces(initialState)
+            setActiveLoc("")
+        } else {
+            setPlaces(initialState.filter(p => p.location.locationCountry === location))
+        }
+
+
+    }
+
     return (
         <div className={styles.filtersWrapp}>
-            {locName.map(f => <button className={cn(styles.btn, { [styles.active]: f.location === activeLoc })} key={f.location} onClick={() => { setActiveLoc(f.location) }}>{f.location}</button>)}
+            {locName.map(f => <button className={cn(styles.btn, { [styles.active]: f.location === activeLoc })} key={f.location} onClick={() => { filterHandler(f.location) }}>{f.location}</button>)}
         </div>
     );
 }

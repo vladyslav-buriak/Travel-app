@@ -17,14 +17,14 @@ const Search: FC<ISearch> = ({ initialState, isLoading, setPlaces }) => {
     const enterValue = e.target.value;
     setInputValue(enterValue);
 
-    setTimeout(() => {
-      if (enterValue) {
-        setPlaces(initialState.filter(p => p.location.locationCity.toLowerCase().includes(enterValue) || p.location.locationCountry.includes(inputValue)))
-      } else {
-        setPlaces(initialState)
-      }
-      isLoading(false)
-    }, 2000)
+
+    if (enterValue) {
+      setPlaces(initialState.filter(p => p.location.locationCity.toLowerCase().includes(enterValue) || p.location.locationCountry.includes(inputValue)))
+    } else {
+      setPlaces(initialState)
+    }
+    isLoading(false)
+
   }
 
 
