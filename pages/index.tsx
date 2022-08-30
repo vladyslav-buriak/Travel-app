@@ -27,7 +27,7 @@ const Home: NextPage<IHome> = ({ initialState }) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(`${BASE_URL}/place`);
+  const res = await fetch(`${BASE_URL}/places`);
   const initialState = await res.json();
   return {
     props: {

@@ -5,7 +5,7 @@ import { TypeSetState } from "../../../types/common/index";
 import { IPlace } from "../../../types/place";
 import { FC } from "react";
 
-const locName = [
+const countries = [
     { location: "France" },
     { location: "Japan" },
     { location: "Norway" },
@@ -39,7 +39,7 @@ const Filters: FC<IFilter> = ({ initialState, setPlaces }) => {
 
     return (
         <div className={styles.filtersWrapp}>
-            {locName.map(f => <button className={cn(styles.btn, { [styles.active]: f.location === activeLoc })} key={f.location} onClick={() => { filterHandler(f.location) }}>{f.location}</button>)}
+            {countries.map(f => <button className={cn(styles.btn, { [styles.active]: f.location === activeLoc })} key={f.location} onClick={() => { filterHandler(f.location) }}>{f.location}</button>)}
         </div>
     );
 }
