@@ -1,0 +1,40 @@
+@import "../../../../assets/styles/variables.scss";
+
+.btn {
+    outline: none;
+    border: none;
+    background-color: $accent;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 1.5rem;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.4s ease-in-out ,box-shadow 0.4s ease-in-out;
+    box-shadow: 0 3px 6px rgba($accent, 0.4);
+    margin: 2rem auto 0;
+
+    &:hover {
+        background-color: lighten($accent, 10%);
+        box-shadow: 0 3px 6px rgba($accent, 0.7);
+
+    }
+
+    >span:not(:last-child) {
+        color: $white;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-left: 2rem;
+    }
+
+    >span+span {
+        background-color: $white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

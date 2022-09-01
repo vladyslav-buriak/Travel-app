@@ -1,0 +1,72 @@
+@import "../../../../assets/styles/variables.scss";
+
+.wrapp {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.btn {
+    outline: none;
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color ease-in-out .3s;
+    display: block;
+    @include glassEffect;
+
+
+    &:hover {
+        background: darken(rgba(255, 255, 255, 0.5), 30%)
+    }
+
+    >span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+    }
+}
+
+
+
+.wrappBtn {
+    position: relative;
+}
+
+.menu {
+    padding: 1rem 0;
+    position: absolute;
+    top: calc(100% + 10px);
+    border-radius: 1rem;
+    margin: 0 auto;
+    width: max-content;
+    animation: hide 0.4s;
+    z-index: 1;
+    @include glassEffect;
+
+    >li {
+        >a {
+            font-size: 1rem;
+            color: $white;
+            transition: color, background-color ease-in-out .3s;
+            z-index: 2;
+            display: block;
+            padding: 0.3rem 2rem;
+
+            &:hover {
+                color: $accent;
+                background: rgba(255, 255, 255, 0.5);
+
+            }
+        }
+    }
+
+    >li+li {
+        margin-top: 1rem;
+    }
+}

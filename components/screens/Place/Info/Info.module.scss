@@ -1,0 +1,81 @@
+@import "../../../../assets//styles/variables.scss";
+
+
+
+.wrapp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    width: 80%;
+    margin: 8rem auto 0;
+
+    .titleWrap {
+        display: flex;
+        align-items: center;
+
+        >h2 {
+            font-size: 2rem;
+            color: $white;
+            font-weight: 500;
+            margin-left: 1rem;
+        }
+
+        >span {
+            color: $white;
+            display: flex;
+        }
+    }
+
+    .text {
+        margin-top: 1.5rem;
+        color: $white;
+        line-height: 1.6;
+        max-width: 95%;
+    }
+
+    .evaluate {
+        display: flex;
+        margin-top: 1.5rem;
+
+        >div span {
+            color: $white;
+            display: block;
+            font-weight: bold;
+        }
+
+        >div span:last-child {
+            margin-left: 0.75rem;
+        }
+
+        >div{
+            padding: 0.75rem 1.25rem;
+            border: 2px solid;
+            border-color: rgba($gray, 0.5);
+            border-radius: 2rem;
+            display: flex;
+            justify-content: space-around;
+            cursor: pointer;
+            transition: border ease-in-out .3s;
+
+            &:hover{
+            border-color: rgba($gray, 0.9);
+
+            }
+        }
+
+        .rating {
+            >span:not(:last-child) {
+                color: gold;
+
+            }
+        }
+
+        .calendar{
+            margin-left: 4rem;
+        }
+    }
+}

@@ -3,12 +3,13 @@ import { FC } from "react";
 
 interface IChildren {
     children: React.ReactNode;
+    isMaxWidth:boolean;
 };
 
-const Layaot: FC<IChildren> = ({ children }) => {
+const Layaot: FC<IChildren> = ({ children,isMaxWidth = true }) => {
     return (
         <>
-            <div style={{maxWidth:'670px',margin:'0 auto'}}>
+            <div style={{maxWidth:isMaxWidth && '670px',margin:'0 auto'}}>
                 {children}
             </div>
 

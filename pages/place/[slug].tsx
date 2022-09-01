@@ -3,6 +3,7 @@ import Layaot from '../../components/common/Layout';
 import { BASE_URL } from '../../constants/index';
 import { GetServerSideProps, GetStaticProps, NextPage, GetStaticPaths } from 'next';
 import { IPlace } from '../../types/place';
+import Place from '../../components/screens/Place/index';
 
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -27,14 +28,14 @@ interface IPlaceChoice {
     place: IPlace[]
 }
 
-const Place: NextPage<IPlaceChoice> = ({ place }) => {
+const PlacePage: NextPage<IPlaceChoice> = ({ place }) => {
 
     return (
         <>
-            <Layaot><h2>Place : {place.slug}</h2></Layaot>
+            <Place place={place}/>
         </>
 
     );
 }
 
-export default Place
+export default PlacePage

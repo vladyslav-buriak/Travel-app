@@ -16,7 +16,7 @@ const Home: NextPage<IHome> = ({ initialState }) => {
   
 
   return (
-    <Layaot>
+    <Layaot isMaxWidth={true}>
       <HeaderSection initialState={initialState} setPlaces={setPlaces} isLoading={setIsLoading} />
       <div className="sm-container">
         <Filters setPlaces={setPlaces} initialState={initialState}  />
