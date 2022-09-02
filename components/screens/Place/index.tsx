@@ -1,8 +1,8 @@
 import { FC } from "react";
-import Layaot from "../../common/Layout";
-import IPlace from "../../../types";
-import BookTrip from "../../screens/Place/BookTrip";
-import Info from "../../screens/Place/Info";
+import Layaot from '../../../components/common/Layout';
+import { IPlace } from "../../../types/place";
+import BookTrip from "./BookTrip";
+import Info from "./Info";
 import Header from "./Header/index";
 import BackGround from "./Background/index";
 

@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { IPlace } from "../../../../types/place";
 import styles from "./Background.module.scss";
 
 

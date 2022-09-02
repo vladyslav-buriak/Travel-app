@@ -16,7 +16,16 @@
     "module": "esnext",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": "./travel-app/",
+		"paths": {
+			"@/components/*": ["components/*"],
+			"@/screens/*": ["components/screens/*"],
+			"@/common/*": ["components/common/*"],
+			"@/elements/*": ["components/elements/*"],
+
+			"@/types/*": ["types/*"],
+		}
   },
   "include": [
     "next-env.d.ts",

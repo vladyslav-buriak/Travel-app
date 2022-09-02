@@ -17,3 +17,4 @@ export interface IFavorite {
     slug:string;
     name:string
 }
+

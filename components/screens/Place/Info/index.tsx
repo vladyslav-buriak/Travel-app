@@ -8,6 +8,7 @@ interface IInfoProps {
     place: IPlace;
 }
 const Info: FC<IInfoProps> = ({ place }) => {
+    
     return (
         <div className={styles.wrapp}>
             <div className={styles.titleWrap}>
@@ -27,7 +28,7 @@ const Info: FC<IInfoProps> = ({ place }) => {
                     <span>{place.duration} Days</span>
                 </div>
             </div>
-            <Map/>
+            <Map location={place.location}/>
         </div>
     )
 }
