@@ -4,23 +4,16 @@ import { useState } from "react";
 import { TypeSetState } from "../../../types/common/index";
 import { IPlace } from "../../../types/place";
 import { FC } from "react";
-
-const countries = [
-    { location: "France" },
-    { location: "Japan" },
-    { location: "Norway" },
-    { location: "Italy" },
-    { location: "Germany" },
-    { location: "Brazil" },
-]
+import uniqBy from 'lodash/uniqBy';
 
 
 interface IFilter {
     setPlaces: TypeSetState<IPlace[]>;
-    initialState: IPlace[];
+    initialState: IPlace[]
 }
 
 const Filters: FC<IFilter> = ({ initialState, setPlaces }) => {
+
 
     const [activeLoc, setActiveLoc] = useState("");
 
@@ -39,7 +32,7 @@ const Filters: FC<IFilter> = ({ initialState, setPlaces }) => {
 
     return (
         <div className={styles.filtersWrapp}>
-            {countries.map(f => <button className={cn(styles.btn, { [styles.active]: f.location === activeLoc })} key={f.location} onClick={() => { filterHandler(f.location) }}>{f.location}</button>)}
+            {uniqBy(initialState, "location.locationCountry").map(f => <button className={cn(styles.btn, { [styles.active]: f.location.locationCountry === activeLoc })} key={f.location.locationCountry} onClick={() => { filterHandler(f.location.locationCountry) }}>{f.location.locationCountry}</button>)}
         </div>
     );
 }

@@ -11,7 +11,6 @@ interface IPopularPlaces {
 }
 
 const PopularPlaces: FC<IPopularPlaces> = ({ places, isLoading }) => {
-
     return (
         <div className={styles.popularPlaces}>
             <h2 className={styles.title}>Popular Places</h2>
@@ -19,7 +18,7 @@ const PopularPlaces: FC<IPopularPlaces> = ({ places, isLoading }) => {
                 {isLoading ? <div>
                     <Skeleton count={2} height={300} borderRadius={'2rem'} baseColor="#1b1b1d" highlightColor="#444" />
                 </div> : places.length ? places.map(p => {
-                    return <Link href={`/place/${p.slug}`}><div className={styles.item} style={{ backgroundImage: `url(${p.imgUrl})` }}>
+                    return <Link href={`/place/${p.slug}`} key={p._id}><div className={styles.item} style={{ backgroundImage: `url(${p.imgUrl})` }}>
                         <span>
                             {p.location.locationCity}, {p.location.locationCountry}
                         </span>

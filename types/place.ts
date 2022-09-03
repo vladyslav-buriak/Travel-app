@@ -4,6 +4,7 @@ interface ILocation{
 }
 
 export interface IPlace {
+    _id:string;
     description:string;
     imgUrl:string;
     location:ILocation;

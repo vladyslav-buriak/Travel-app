@@ -7,19 +7,20 @@ import { BASE_URL } from '../constants/index';
 import { IPlace } from '../types/place';
 import { useState } from 'react';
 
+
 interface IHome {
   initialState: IPlace[];
 }
 const Home: NextPage<IHome> = ({ initialState }) => {
-  const [places ,setPlaces] = useState(initialState);
-  const [isLoading,setIsLoading] = useState(false);
-  
+  const [places, setPlaces] = useState(initialState);
+  const [isLoading, setIsLoading] = useState(false);
+
 
   return (
     <Layaot isMaxWidth={true}>
       <HeaderSection initialState={initialState} setPlaces={setPlaces} isLoading={setIsLoading} />
       <div className="sm-container">
-        <Filters setPlaces={setPlaces} initialState={initialState}  />
+        <Filters setPlaces={setPlaces} initialState={initialState} />
         <PopularPlaces places={places} isLoading={isLoading} />
       </div>
     </Layaot>
