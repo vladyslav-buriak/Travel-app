@@ -6,7 +6,7 @@ import PopularPlaces from '../components/elements/Home/PopularPlaces/index';
 import { BASE_URL } from '../constants/index';
 import { IPlace } from '../types/place';
 import { useState } from 'react';
-
+import Meta from "../utils/Meta";
 
 interface IHome {
   initialState: IPlace[];
@@ -18,6 +18,7 @@ const Home: NextPage<IHome> = ({ initialState }) => {
 
   return (
     <Layaot isMaxWidth={true}>
+      <Meta title={"Book your trip"} description={"main page about traveling"}></Meta>
       <HeaderSection initialState={initialState} setPlaces={setPlaces} isLoading={setIsLoading} />
       <div className="sm-container">
         <Filters setPlaces={setPlaces} initialState={initialState} />
